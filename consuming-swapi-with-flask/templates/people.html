@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block title %}People{% endblock %} {% block
+page_title %} People {% endblock %} {% block content %}
+<div class="table-responsive">
+  <table id="people-data-table" class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Birth year</th>
+        <th>Eye color</th>
+        <th>Hair Color</th>
+        <th>Gender</th>
+        <th>Height</th>
+        <th>Mass</th>
+        <th>Skin Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for person in people %}
+      <tr>
+        <td>{{ person.name.0}}</td>
+        <td>{{ person.birth_year.0}}</td>
+        <td>{{ person.eye_color.0}}</td>
+        <td>{{ person.hair_color.0}}</td>
+        <td>{{ person.gender.0}}</td>
+        <td>{{ person.height.0}}</td>
+        <td>{{ person.mass.0}}</td>
+        <td>{{ person.skin_color.0}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{{ pagination.links }} {% endblock %}
