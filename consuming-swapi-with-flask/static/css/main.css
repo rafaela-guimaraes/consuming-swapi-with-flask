@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400, 700);
+@import url(https://fonts.googleapis.com/css2?family=Pathway + Gothic + One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poller + One:400);
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 92%;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 50vh;
+  padding: 20px;
+  background-attachment: fixed;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-title .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.page-title {
+  position: absolute;
+  margin: 0;
+  top: 20vh;
+  width: 100%;
+  font-size: 3.8rem;
+  font-family: "Pathaway Gothic One";
+  letter-spacing: 2.8rem;
+  text-transform: uppercase;
+  color: #feda4a;
+}
+
+.menu {
+  z-index: 2;
+}
+
+.menu .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 25px;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu a:hover {
+  color: #feda4a;
+}

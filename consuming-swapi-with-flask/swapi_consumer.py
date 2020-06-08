@@ -2,19 +2,26 @@ import traceback
 import requests
 
 
+from models import StarshipQuerySet
 class Swapi():
 
     BASE_URL = "https://swapi.dev/api/"
 
     @classmethod
     def get_people(self):
-        results = self.do_request('GET', 'people')['results']
+        results = self.do_request('GET', BASE_URL + 'people/')['results']
         return results
 
     @classmethod
-    def get_starships(self, starship_id=None):
-        results = self.do_request("GET", 'starships')['results']
-        return results
+    def get_starships(self):
+        resource = self.do_request("GET", self.BASE_URL + 'starships/')
+        results = resource['results']
+        while resource.get('next') is not None:
+            resource = self.do_request("GET", resource['next'])
+            results += resource['results']
+        
+        startships = StarshipQuerySet(results).order_by('score', descending=True)
+        return startships
 
     @classmethod
     def get_films(self, film_id=None):
@@ -35,15 +42,6 @@ class Swapi():
         return results
 
     @classmethod
-    def get_starships(self, starship_id=None):
-        endpoint = 'starships'
-        if starship_id:
-            endpoint += '/{}'.format(starship_id)
-
-        results = self.do_request("GET", endpoint)['results']
-        return results
-
-    @classmethod
     def get_planets(self, planet_id=None):
         endpoint = 'planets'
         if planet_id:
@@ -54,7 +52,7 @@ class Swapi():
 
     @classmethod
     def do_request(self, request_method, endpoint):
-        response = requests.request(request_method, self.BASE_URL + endpoint)
+        response = requests.request(request_method, endpoint)
         try:
             response.raise_for_status()
             return response.json()
