@@ -11,7 +11,7 @@ def index():
 
 @app.route("/people")
 def people():
-    return render_template('people.html')
+    return views.people()
 
 
 @app.route("/starships")

@@ -40,3 +40,35 @@ class StarshipQuerySet(BaseQuerySet):
         super(StarshipQuerySet, self).__init__()
         for starship in starships:
             self.items.append(Starship(**starship))
+
+class Person():
+    def __init__(self, name, birth_year, eye_color, gender,
+                 hair_color, height, mass, skin_color, homeworld,  films, species,
+                 starships, vehicles, created, edited, url, **kwargs):
+
+        self.name = name,
+        self.birth_year = birth_year,
+        self.eye_color = eye_color,
+        self.hair_color = hair_color,
+        self.gender = gender,
+        self.height = height,
+        self.mass = mass,
+        self.skin_color = skin_color,
+        self.homeworld = homeworld,
+        self.films = films,
+        self.species = species,
+        self.starships = starships,
+        self.vehicles = vehicles,
+        self.created = created,
+        self.edited = edited,
+        self.url = url
+
+class PersonQuerySet(BaseQuerySet):
+
+    def __init__(self, people):
+        super(PersonQuerySet, self).__init__()
+        for person in people:
+            self.items.append(Person(**person))
+    
+    def get_all(self):
+        return self.items

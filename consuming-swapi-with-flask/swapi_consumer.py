@@ -2,15 +2,20 @@ import traceback
 import requests
 
 
-from models import StarshipQuerySet
+from models import StarshipQuerySet, PersonQuerySet
 class Swapi():
 
     BASE_URL = "https://swapi.dev/api/"
 
     @classmethod
     def get_people(self):
-        results = self.do_request('GET', BASE_URL + 'people/')['results']
-        return results
+        resource = self.do_request("GET", self.BASE_URL + 'people/')
+        results = resource['results']
+        while resource.get('next') is not None:
+            resource = self.do_request("GET", resource['next'])
+            results += resource['results']
+        people = PersonQuerySet(results).get_all()
+        return people
 
     @classmethod
     def get_starships(self):
