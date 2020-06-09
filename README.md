@@ -18,11 +18,16 @@ Starship page: Display a table with the starships info
 Python >=3.6
 All the other dependecies are listed in requirements.txt 
 
-Run:
-```
-pip install -r requirements.txt
+## Run
 
 ```
+pip install -r requirements.txt
+$env:FLASK_APP = "consuming-swapi-with-flask/app.py"
+flask run
+```
+
+## Improvements for later
+
 - Docker deploy 
 - Add unit tests
 - Make requests asynchronously
