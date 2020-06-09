@@ -116,3 +116,21 @@ a {
     text-align: center;
     padding: 15%;
 }
+
+.main {
+    margin: 0;
+    text-align: center;
+    font-family: "Poller One";
+    font-size: 2.0rem;
+}
+.main a {
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: #a9a9a9
+}
+
+.main a:hover {
+    color: #feda4a;
+  }
