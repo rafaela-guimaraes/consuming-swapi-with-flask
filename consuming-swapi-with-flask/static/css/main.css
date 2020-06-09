@@ -93,3 +93,27 @@ a {
 .menu a:hover {
   color: #feda4a;
 }
+
+.filter-form {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #feda4a;
+    font-family: "Poller One";
+    font-size: 1.5rem;
+
+}
+
+.filter-form__item{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-form__item #filter{
+    background-color: #feda4a;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+}

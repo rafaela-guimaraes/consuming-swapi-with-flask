@@ -19,32 +19,32 @@ class Swapi():
     @classmethod
     def get_people(self):
         results = self.get_all_results('people')
-        people = PersonQuerySet(results).get_all()
+        people = PersonQuerySet(results)
         return people
 
     @classmethod
     def get_starships(self):
         results = self.get_all_results('starships')
         startships = StarshipQuerySet(
-            results).order_by('score', descending=True)
+            results)
         return startships
 
     @classmethod
     def get_films(self):
         results = self.get_all_results('films')
-        films = FilmQuerySet(results).get_all()
+        films = FilmQuerySet(results)
         return films
 
     @classmethod
     def get_vehicles(self):
         results = self.get_all_results('vehicles')
-        vehicles = VehicleQuerySet(results).get_all()
+        vehicles = VehicleQuerySet(results)
         return vehicles
 
     @classmethod
     def get_planets(self, planet_id=None):
         results = self.get_all_results('planets')
-        planets = PlanetQuerySet(results).get_all()
+        planets = PlanetQuerySet(results)
         return planets
 
 

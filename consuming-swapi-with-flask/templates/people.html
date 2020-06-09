@@ -1,5 +1,27 @@
 {% extends "base.html" %} {% block title %}People{% endblock %} {% block
 page_title %} People {% endblock %} {% block content %}
+<form method="POST" action="">
+  <div class="filter-form">
+    <div class="filter-form__item">
+      {{ filter_form.vehicle.label }} {{ filter_form.vehicle }}
+    </div>
+
+    <div class="filter-form__item">
+      {{ filter_form.starship.label }} {{ filter_form.starship }}
+    </div>
+
+    <div class="filter-form__item">
+      {{ filter_form.planet.label }} {{ filter_form.planet }}
+    </div>
+
+    <div class="filter-form__item">
+      {{ filter_form.film.label }} {{ filter_form.film }}
+    </div>
+    <div class="filter-form__item">
+      {{filter_form.filter}}
+    </div>
+  </div>
+</form>
 <div class="table-responsive">
   <table id="people-data-table" class="table table-hover">
     <thead>
@@ -17,14 +39,14 @@ page_title %} People {% endblock %} {% block content %}
     <tbody>
       {% for person in people %}
       <tr>
-        <td>{{ person.name.0}}</td>
-        <td>{{ person.birth_year.0}}</td>
-        <td>{{ person.eye_color.0}}</td>
-        <td>{{ person.hair_color.0}}</td>
-        <td>{{ person.gender.0}}</td>
-        <td>{{ person.height.0}}</td>
-        <td>{{ person.mass.0}}</td>
-        <td>{{ person.skin_color.0}}</td>
+        <td>{{ person.name}}</td>
+        <td>{{ person.birth_year}}</td>
+        <td>{{ person.eye_color}}</td>
+        <td>{{ person.hair_color}}</td>
+        <td>{{ person.gender}}</td>
+        <td>{{ person.height}}</td>
+        <td>{{ person.mass}}</td>
+        <td>{{ person.skin_color}}</td>
       </tr>
       {% endfor %}
     </tbody>

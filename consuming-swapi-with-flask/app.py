@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from swapi_consumer import Swapi
 import views
 app = Flask(__name__)
@@ -9,9 +9,9 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/people")
+@app.route("/people", methods=['GET', 'POST'])
 def people():
-    return views.people()
+    return views.people(request)
 
 
 @app.route("/starships")
