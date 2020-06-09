@@ -12,7 +12,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
@@ -39,7 +39,7 @@
   <body>
     <header class="header">
       <navbar class="menu">
-        <div class="container">
+        <div class="container-page">
           <ul class="menu">
             <li>
               <a href="/" class="home">Home</a>
@@ -50,13 +50,13 @@
         </div>
       </navbar>
       <div class="page-title">
-        <div class="container">
+        <div class="container-page">
           {% block page_title %} {% endblock %}
         </div>
       </div>
     </header>
     <main>
-      <div class="container">
+      <div class="container-page">
         {% block content %}{% endblock %}
       </div>
     </main>

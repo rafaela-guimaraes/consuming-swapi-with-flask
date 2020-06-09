@@ -1,26 +1,29 @@
 {% extends "base.html" %} {% block title %}People{% endblock %} {% block
 page_title %} People {% endblock %} {% block content %}
-<form method="POST" action="">
-  <div class="filter-form">
-    <div class="filter-form__item">
-      {{ filter_form.vehicle.label }} {{ filter_form.vehicle }}
-    </div>
+<div class="container-page">
 
-    <div class="filter-form__item">
-      {{ filter_form.starship.label }} {{ filter_form.starship }}
+  <form method="POST" action="">
+    <div class="filter-form">
+      <div class="filter-form__item">
+        {{ filter_form.vehicle.label }} {{ filter_form.vehicle }}
+      </div>
+  
+      <div class="filter-form__item">
+        {{ filter_form.starship.label }} {{ filter_form.starship }}
+      </div>
+  
+      <div class="filter-form__item">
+        {{ filter_form.planet.label }} {{ filter_form.planet }}
+      </div>
+  
+      <div class="filter-form__item">
+        {{ filter_form.film.label }} {{ filter_form.film }}
+      </div>
+      <div class="filter-form__item">
+        {{filter_form.filter}}
+      </div>
     </div>
-
-    <div class="filter-form__item">
-      {{ filter_form.planet.label }} {{ filter_form.planet }}
-    </div>
-
-    <div class="filter-form__item">
-      {{ filter_form.film.label }} {{ filter_form.film }}
-    </div>
-    <div class="filter-form__item">
-      {{filter_form.filter}}
-    </div>
-  </div>
+</div>
 </form>
 <div class="table-responsive">
   <table id="people-data-table" class="table table-hover">
