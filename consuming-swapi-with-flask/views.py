@@ -4,6 +4,9 @@ from swapi_consumer import Swapi
 
 STARSHIPS = Swapi.get_starships()
 PEOPLE = Swapi.get_people()
+VEHICLES = Swapi.get_vehicles()
+PLANETS = Swapi.get_vehicles()
+FILMS = Swapi.get_films()
 
 
 def starships():
