@@ -2,3 +2,4 @@ Flask==1.0.2
 requests==2.22.0
 flask-paginate==0.6.0
 WTForms==2.3.0
+gunicorn==20.0.4
