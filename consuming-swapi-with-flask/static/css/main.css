@@ -1,6 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400, 700);
-@import url(https://fonts.googleapis.com/css2?family=Pathway + Gothic + One&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Poller + One:400);
+@import url(https://fonts.googleapis.com/css2?family=Pathway+Gothic+One);
+@import url(https://fonts.googleapis.com/css2?family=Poller+One);
+
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
 .container {
   position: relative;
@@ -11,7 +15,7 @@
 body {
   margin: 0 auto;
   font-size: 1.3rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Pathaway Gothic One";
 }
 
 header {
@@ -50,8 +54,8 @@ a {
   margin: 0;
   top: 20vh;
   width: 100%;
-  font-size: 3.8rem;
-  font-family: "Pathaway Gothic One";
+  font-size: 5rem;
+  font-family: "Poller One";
   letter-spacing: 2.8rem;
   text-transform: uppercase;
   color: #feda4a;
@@ -63,7 +67,7 @@ a {
 
 .menu .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
