@@ -16,13 +16,13 @@ page_title %} Starships {% endblock %} {% block content %}
     <tbody>
       {% for starship in starships %}
       <tr>
-        <td>{{ starship.score.0}}</td>
-        <td>{{ starship.name.0}}</td>
-        <td>{{ starship.model.0}}</td>
-        <td>{{ starship.starship_class.0}}</td>
-        <td>{{ starship.cargo_capacity.0}}</td>
-        <td>{{ starship.crew.0}}</td>
-        <td>{{ starship.length.0}}</td>
+        <td>{{ starship.score}}</td>
+        <td>{{ starship.name}}</td>
+        <td>{{ starship.model}}</td>
+        <td>{{ starship.starship_class}}</td>
+        <td>{{ starship.cargo_capacity}}</td>
+        <td>{{ starship.crew}}</td>
+        <td>{{ starship.length}}</td>
       </tr>
       {% endfor %}
     </tbody>
