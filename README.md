@@ -18,13 +18,16 @@ Starship page: Display a table with the starships info
 Python >=3.6
 All the other dependecies are listed in requirements.txt 
 
-## Run
+## Run locally
 
 ```
 pip install -r requirements.txt
 $env:FLASK_APP = "consuming-swapi-with-flask/app.py"
 flask run
 ```
+
+## Hosted
+https://sawapi-consumer-rguimaraes.herokuapp.com/
 
 ## Improvements for later
 
